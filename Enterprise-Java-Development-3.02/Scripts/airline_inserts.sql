@@ -1,15 +1,15 @@
 USE AirlineDB;
 
-insert into Customers (CustomerName, CustomerStatus)
+insert into Customers (CustomerName, CustomerStatus, TotalCustomerMileage)
 values
-('Agustine Riviera', 'Silver'),
-('Alaina Sepulvida', 'None'),
-('Tom Jones', 'Gold'),
-('Sam Rio', 'None'),
-('Jessica James', 'Silver'),
-('Ana Janco', 'Silver'),
-('Jennifer Cortez', 'Gold'),
-('Christian Janco', 'Silver');
+('Agustine Riviera', 'Silver', 115235),
+('Alaina Sepulvida', 'None', 6008),
+('Ana Janco', 'Silver',	136773),
+('Christian Janco', 'Silver', 14642),
+('Jennifer Cortez', 'Gold', 300582),
+('Jessica James', 'Silver',	127656),
+('Sam Rio', 'None',	2653),
+('Tom Jones', 'Gold', 205767);
 
 insert into Aircraft (AircraftName)
 values 
@@ -21,26 +21,21 @@ insert into Flights (FlightNumber, AircraftID, TotalAircraftSeats, FlightMileage
 values
 ('DL143', 1, 400, 135),
 ('DL122', 2, 236, 4370),
-('DL53', 3, 264, 2078),
 ('DL222', 3, 264, 1765),
-('DL37', 1, 400, 531);
+('DL37', 1, 400, 531),
+('DL53', 3, 264, 2078);
 
-insert into CustomerFlights (CustomerID, FlightID, TotalCustomerMileage)
+insert into CustomerFlights (CustomerID, FlightID)
 values
-(1, 1, 115235),
-(1, 2, 115235),
-(2, 2, 6008),
-(1, 1, 115235),
-(3, 2, 205767),
-(3, 3, 205767),
-(1, 1, 115235),
-(4, 1, 2653),
-(1, 1, 115235),
-(3, 4, 205767),
-(5, 1, 127656),
-(4, 1, 2653),
-(6, 4, 136773),
-(7, 4, 300582),
-(5, 2, 127656),
-(4, 5, 2653),
-(8, 4, 14642);
+(1, 1),
+(1, 2),
+(2, 3),
+(3, 3),
+(4, 3),
+(5, 1),
+(6, 2),
+(7, 1),
+(7, 4),
+(8, 2),
+(8, 5),
+(8, 3);

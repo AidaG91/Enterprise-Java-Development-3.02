@@ -4,7 +4,8 @@ USE AirlineDB;
 create table Customers (
 CustomerID INT primary key auto_increment,
 CustomerName VARCHAR(100),
-CustomerStatus VARCHAR(50)
+CustomerStatus VARCHAR(50),
+TotalCustomerMileage INT
 );
 
 -- Tabla de aviones
@@ -28,9 +29,8 @@ create table CustomerFlights (
 CustomerFlightID INT primary key auto_increment,
 CustomerID INT,
 FlightID INT,
-TotalCustomerMileage INT,
 foreign key (CustomerID) references Customers(CustomerID),
 foreign key (FlightID) references Flights(FlightID)
 );
 
--- Descripción: Script para crear estructura de base de datos del la aerolínea
+-- Script para crear estructura de base de datos del la aerolínea
